@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #d28b52;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.navbar .logo img,
+.footer .logo {
+  max-height: 50px;
+  width: auto;
+  border-radius: 6rem;
+}
+
+.navbar .links {
+  display: flex;
+}
+
+.main-content {
+  position: relative;
+  text-align: center;
+}
+
+.background-image {
+  background-image: url('klempnerindernähe.png');
+  background-size: cover;
+  background-position: center;
+  height: 60rem;
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 0 20px; /* Hinzugefügt */
+}
+
+.text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #d28b52;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #bf7b48;
+  transform: translateY(-2px);
+}
+
+.cta-button:active {
+  transform: translateY(1px);
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  height: 1px;
+  background-color: #d28b52;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Falls die Ansicht zu klein ist, werden die Boxen untereinander angezeigt */
+  padding: 20px;
+}
+
+.service-box {
+  width: 30%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: left;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.after-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 20px; /* Hinzugefügt, um den Abstand zwischen den Elementen zu kontrollieren */
+}
+
+.after-services img {
+  max-width: 30%; /* Verkleinert das Bild */
+  height: auto;
+  border-radius: 9px;
+  margin-left: 20%;
+}
+
+.after-services .contact-details {
+  max-width: 65%; /* Angepasst, um den zusätzlichen Platz zu nutzen */
+  margin-right: 20%;
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: left;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo .logo {
+  max-height: 50px;
+  width: auto;
+  border-radius: 6rem;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links a {
+  color: white;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.footer-social a {
+  color: white;
+  margin-right: 10px;
+}
+
+.footer-social a:hover {
+  color: #bf7b48;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+  .services .service-box {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar .links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .background-image {
+    height: 40rem;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .services .service-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .after-services {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .after-services img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .after-services .contact-details {
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-social {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cta-buttons {
+    position: absolute;
+    top: 80%; /* Einstellen, wie du möchtest */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .text {
+    top: 30%; /* Einstellen, wie du möchtest */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Hintergrund hinzugefügt */
+    border-radius: 10px;
+  }
+}
